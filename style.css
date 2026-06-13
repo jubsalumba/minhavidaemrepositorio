@@ -1,0 +1,264 @@
+:root {
+    --main-color: #d47f00;
+    --black: #000000;
+    --bg: #860000;
+    --border: 0.1rem solid rgb(172, 77, 0);
+    font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: 0.2s linear;
+    font-family: "Playfair Display", serif;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+section {
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-bottom: var(--border);
+    background-color: var(--bg);
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.navbar  a {
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color:#ffaa2a;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color);
+    padding-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+.icon img {
+    margin: 1rem;
+    cursor: pointer;
+
+}
+
+.icons img:hover {
+    width: 40px;
+    height: 40px;
+}
+
+.raio-amarelo {
+    width: 100px;
+    height: 100px;
+}
+
+.btn {
+    background-color: #f38823;
+    color: #ffffff;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.btn:hover {
+    letter-spacing: 0.2rem;
+}
+
+.home-container {
+    background: url("img/pista-de-cor.jpg");
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.home-container section {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.about-img {
+    width: 95%;
+    height: auto;
+}
+
+.content {
+    max-width: 60rem;
+}
+
+.content h3 {
+    color: #fff;
+    font-size: 6rem;
+}
+
+.content p {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 100;
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+.title {
+    font-size: 4rem;
+    color: #e4941e;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.title span {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    background-color: #f77f1d;
+    gap: 1.5rem;
+}
+
+.about .row .content {
+    padding: 2rem; 
+}
+
+.about .row .content h3 {
+    font-size: 3rem;
+    color: #ac1414;
+}
+
+.about .row .p {
+    font-size: 1.6rem;
+    color: #ffffff;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+.galeria {
+    background-color: var(--bg);
+}
+
+.galeria .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+    padding-top: 3rem;
+}
+
+.galeria .box-container .box {
+    position: relative;
+    overflow: hidden;
+    border: var(--border);
+    border-radius: 1rem;
+    height: 25rem;
+}
+
+.galeria .box-container .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.galeria .box-container .box .content-galeria {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    transition: 0.3s ease-in-out;
+}
+
+.galeria .box-container .box:hover .content-galeria {
+    top: 0;
+}
+
+.galeria .box-container .box .content-galeria h3 {
+    font-size: 2.5rem;
+    color: var(--main-color);
+}
+
+.galeria .box-container .box .content-galeria p {
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.presente-img {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: auto;
+    border: var(--border);
+    border-radius: 1rem;
+    margin: 0 auto;
+    background-color: #f77f1d;
+}
+
+.correio-elegante {
+    margin-top: 3rem;
+}
+
+.correio-elegante .box-container {   
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.carta-container {
+  display: flex;
+  align-items: center; /* Alinha o texto e a imagem verticalmente ao centro */
+  gap: 20px;           /* Espaço entre o texto e a imagem */
+  max-width: 800px;    /* Largura máxima da seção */
+  margin: 0 auto;      /* Centraliza a carta na tela */
+  padding: 20px;
+}
+
+/* Estilização do bloco de texto (A carta em si) */
+.carta-texto {
+    background-color: #fdf6e2; /* Cor de fundo (ex: tom de papel antigo/creme) */
+    border: 1px solid #e0d5be;  /* Uma borda sutil */
+    border-radius: 8px;  /* Arredonda os cantos do fundo */
+    padding: 30px;       /* Espaço interno para o texto não colar na borda */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra leve para dar efeito de papel */
+    font-size: 15px;
+}
+
+/* Estilização do bloco da imagem */
+.carta-imagem {
+  flex: 1;             /* Faz a imagem dividir o espaço igualmente com o texto */
+  text-align: center;
+}
